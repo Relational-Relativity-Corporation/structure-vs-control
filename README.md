@@ -48,3 +48,4 @@ Difference:          9.261387130997869e-06
 ```
 
 Both approaches converge toward the target value (0.0). The structured version reaches a value 41 orders of magnitude closer to zero—not because it's "better optimized," but because the projection operator `x / (1 + |x|)` compounds stability at every step rather than merely bounding the result after the fact
+

@@ -35,3 +35,16 @@ Requires Python 3. No dependencies.
 
 ```bash
 python run.py
+```
+
+## Output
+
+The file `output.txt` shows the result of running `run.py`:
+
+```
+Unstructured result: 9.261387130997869e-06
+Structured result:   1.680645434348696e-47
+Difference:          9.261387130997869e-06
+```
+
+Both approaches converge toward the target value (0.0). The structured version reaches a value 41 orders of magnitude closer to zero—not because it's "better optimized," but because the projection operator `x / (1 + |x|)` compounds stability at every step rather than merely bounding the result after the fact
